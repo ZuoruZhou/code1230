@@ -26,6 +26,12 @@ p {
 	font-size: 24px;
 }
 
+img{
+	position: absolute;
+	left: 45%;
+	bottom: 3%;
+}
+
 footer {
 	position:fixed;
 	bottom:0;
