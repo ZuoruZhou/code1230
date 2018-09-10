@@ -1,23 +1,29 @@
 body {
-	background: #7FDBFF;
-	color: #001f3f;
+	background: #000000;
+	color: #ffffff;
 	text-align:center;
 	font-family:Helvetica;
 	font-size:24px;
 }
 
 h1 {
+	position: absolute; top: 11%; left:20%
+	text-alighn: center;	
 	border-style: solid;
 	border-width: 10px;
-	border-color: #CD5C5C;
+	border-color: #fffffff;
 	padding: 1%;
-	width: 40%;
-	height:10%;
+	width: 60%;
+	height:19%;
 	margin:auto;
+	font-size: 90px
 }
 
 p {
-	font-size:18px;
+	position: absolute;
+	right: 57%;
+	top: 49%;
+	font-size: 24px;
 }
 
 footer {
