@@ -24,6 +24,51 @@ this is a new line
 
 <img src="http://cdn1.buuteeq.com/upload/6202/frink_roatan_2015_460.jpg" alt="image missing!" style="width:25%" />
 
+ <div id='map'></div>
+<script>
+mapboxgl.accessToken = '<pk.eyJ1Ijoia3J5c2hjYWwiLCJhIjoiY2pseGFuN2c2MDhqNDNwcjUzejNqMTJ4aSJ9.XDge9f3xaPXKtVPSu_43nw>';
+var map = new mapboxgl.Map({
+    container: 'map',//container id
+    style: 'mapbox://styles/mapbox/street-v9',//stylesheet location
+    center: [151.004105, -33.813002],//starting postion [lng,lat]
+    pitch: 45,
+    bearing: -17.6
+    zoom: 9 //starting zoom
+});
+
+map.on('load', function() {
+    
+    map.addLayer({
+        'id': 'data',
+        'type': 'fill-extrusion',
+        "source": {
+            'type': 'json',
+            'data': data
+        },
+            'paint': {
+                'fill-extrusion-color': {
+                    'property'; 'childless',
+                    "stops":[
+                        [0,'white'],
+                        [1,'grey'],
+                        [2,'orange']
+                    ]
+
+                },
+                'fill-extrusion-height':{
+                    'property': 'Difference',
+                    "stops":[
+                        [0,0],
+                        [1,50000]
+                    ]
+                },
+                'fill-extrusion-opacity': 0.95   
+            }
+    });
+});
+</script>
+
+ 
 <footer> 
 <a href="https://github.com/madeleinejohanson"> your footer text here</a>
 </footer>
