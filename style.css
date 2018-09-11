@@ -1,35 +1,23 @@
 body {
-	background: #000000;
-	color: #ffffff;
+	background: #FFFFFF;
+	color: #001f3f;
 	text-align:center;
 	font-family:Helvetica;
 	font-size:24px;
 }
 
 h1 {
-	position: absolute; top: 11%; left:20%
-	text-alighn: center;	
 	border-style: solid;
 	border-width: 10px;
-	border-color: #fffffff;
+	border-color: #CD5C5C;
 	padding: 1%;
-	width: 60%;
-	height:19%;
+	width: 40%;
+	height:10%;
 	margin:auto;
-	font-size: 90px
 }
 
 p {
-	position: absolute;
-	right: 57%;
-	top: 49%;
-	font-size: 24px;
-}
-
-img{
-	position: absolute;
-	left: 45%;
-	bottom: 3%;
+	font-size:18px;
 }
 
 footer {
@@ -42,7 +30,7 @@ footer {
 .topnav{
 	position:fixed;
 	top:0;
-	background-color: #DDDDDD;
+	background-color: #FFF;
 }
 
 .topnav a {
@@ -57,5 +45,5 @@ footer {
 
 .topnav a:hover {
 	background-color: #001f3f;
-	color: #DDDDDD;
+	color: #FFF;
 }
