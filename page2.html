@@ -4,35 +4,26 @@
     <meta charset='utf-8' />
     <title></title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-g1-js/v0.48.0/mapbox-gl.js'></script>
+    <script src='https://api.tiles.mapbox.com/mapbox-g1-js/v0.39.1/mapbox-gl.js'></script>
     <script src='./data.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.48.0/mapbox-gl.css' rel='stylesheet' />
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.39.1/mapbox-gl.css' rel='stylesheet' />
     <style>
         body { margin:0; padding:0; }
-        #map { position:absolute; top:0; bottom:0; width:100%; }
+        #map { position:absolute; top:0; bottom:0; width:60%; }
     </style>
 </head>
 <link rel="stylesheet" type="text/css" href="style.css"/>
 <body>
- 
 
- <div class="topnav" id="myTopnav">
- <a href="index.html">Home</a>
- <a href="page1.html">page1</a>
+<div class="topnav" id="myTopnav">
+<a href="index.html">Home</a>
+<a href="page1.html">page1</a>
 <a href="page2.html">page2</a>
 
- </div>
+</div>
+<h1> title </h1>
 
-
-<h1>This is page 2</h1>
-
-<p>paragraph text here<br><br>
-this is a new line
-</p>
-
-<img src="http://cdn1.buuteeq.com/upload/6202/frink_roatan_2015_460.jpg" alt="image missing!" style="width:25%" />
-
- <div id='map'></div>
+<div id='map'></div>
 <script>
 mapboxgl.accessToken = '<pk.eyJ1Ijoia3J5c2hjYWwiLCJhIjoiY2pseGFuN2c2MDhqNDNwcjUzejNqMTJ4aSJ9.XDge9f3xaPXKtVPSu_43nw>';
 var map = new mapboxgl.Map({
@@ -50,12 +41,12 @@ map.on('load', function() {
         'id': 'data',
         'type': 'fill-extrusion',
         "source": {
-            'type': 'json',
+            'type': 'geojson',
             'data': data
         },
             'paint': {
                 'fill-extrusion-color': {
-                    'property'; 'childless',
+                    'property'; 'population',
                     "stops":[
                         [0,'white'],
                         [1,'grey'],
@@ -67,7 +58,7 @@ map.on('load', function() {
                     'property': 'Difference',
                     "stops":[
                         [0,0],
-                        [1,50000]
+                        [0.4,50000]
                     ]
                 },
                 'fill-extrusion-opacity': 0.95   
